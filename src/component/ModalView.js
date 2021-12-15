@@ -22,25 +22,25 @@ const ModalView = (props) => {
                 <ModalBody number={user.number} length={datalength} style={{background: "transparant "}}>
                 <Row className="p-3">
               <Col sm={4} className="align-self-center">
-                <CardImg alt="avatar" className="img-fluid" src={user.avatar} />
+                <CardImg alt="avatar" className="img-fluid" src={user.foto} />
               </Col>
               <Col sm={8} className="bg-light p-3">
                 <Row>
                   <Col sm={12} className="mb-4 text-center">
                     <h5 className="fw-bold mb-2">{user.nama}</h5>
-                    <p className="mb-0">{user.job}</p>
+                    <p className="mb-0">{user.pekerjaan}</p>
                   </Col>
                   <Col sm={4} className="mb-3">
                     <p className="mb-0">Ulang Tahun</p>
                   </Col>
                   <Col sm={8} className="mb-3">
-                    <p className="mb-0">: {user.tanggalLahir}</p>
+                    <p className="mb-0">: {user.ttl}</p>
                   </Col>
                   <Col sm={4} className="mb-3">
                     <p className="mb-0">Jenis Kelamin</p>
                   </Col>
                   <Col sm={8} className="mb-3">
-                    <p className="mb-0">: {user.gender}</p>
+                    <p className="mb-0">: {user.jeniskelamin}</p>
                   </Col>
                   <Col sm={4} className="mb-3">
                     <p className="mb-0">Agama</p>
@@ -52,7 +52,7 @@ const ModalView = (props) => {
                     <p className="mb-0">Nomer HP</p>
                   </Col>
                   <Col sm={8} className="mb-3">
-                    <p className="mb-0">: {user.kontak}</p>
+                    <p className="mb-0">: {user.nomerhp}</p>
                   </Col>
                   <Col sm={4} className="mb-3">
                     <p className="mb-0">Email</p>
