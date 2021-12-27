@@ -1,50 +1,34 @@
-import "./App.css";
-import { useState } from "react";
-import InputForm from "./component/InputForm";
-import ModalView from "./component/ModalView";
-import {Container} from "reactstrap";
+import React from "react";
+import Box from "@mui/material/Box";
+import CssBaseline from "@mui/material/CssBaseline";
+import Sidebar from "./component/Sidebar";
+import GeneratedID from "./component/GeneratedData";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
+import Homepage from "./component/Beranda";
+import Footer from "./component/Footer";
 
-
-function App() {
-  const [userData, setUserData] = useState([]);
-  const [modalShow, setModalShow] = useState(false);
-  const [number, setNumber] = useState(0);
-
-
-const handleSubmitData = (userData) => {
-  setUserData ((prevState) => {
-    return [
-      ...prevState,
-      {
-        ...userData, number: String(number),
-      }
-    ]
-  });
-
-  setNumber(number + 1);
-  setModalShow(true);
+export default function App() {
+  return (
+    <>
+      <Router>
+        <Box sx={{ display: "flex" }}>
+          <CssBaseline />
+          <Sidebar />
+          <Box sx={{ flexGrow: 1 }}>
+            <Routes>
+              <Route path="/" element={<Navigate replace to="/home" />} />
+              <Route path="/home" element={<Homepage />} />
+              <Route path="/generateIDCard" element={<GeneratedID />} />
+            </Routes>
+            <Footer />
+          </Box>
+        </Box>
+      </Router>
+    </>
+  );
 }
-
-const handleResetData = () => {
-  setUserData([]);
-}
-
-console.log (modalShow);
-console.log (userData);
-
-// TEst
-return (
-  <Container fluid>
-    <div className="mx-auto my-4 bg-light rounded-3 border p-5"
-      style={{width: "45%"}}>
-      
-      <InputForm submitData={handleSubmitData} />
-      <button className="btn btn-danger w-100 mb-3" onClick={handleResetData}> Reset Data </button>
-      {modalShow && (
-        <ModalView user={userData} />
-      )}
-    </div>
-  </Container>
-);
-      }
-export default App;
