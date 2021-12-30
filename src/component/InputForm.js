@@ -127,7 +127,6 @@ function InputForm(props) {
                 value={user.agama}
                 onChange={handleChange}
               >
-                <option>-</option>
                 <option value="islam">Islam</option>
                 <option value="kristen">Kristen</option>
                 <option value="katolik">Katolik</option>

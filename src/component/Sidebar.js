@@ -87,7 +87,7 @@ const Drawer = styled(MuiDrawer, {
 
 const useStyles = makeStyles({
   paper: {
-    background: "#080707",
+    background: "#3346FF",
     color: "white",
   },
 });
@@ -108,7 +108,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <AppBar position="fixed" open={open} style={{ background: "#080707" }}>
+      <AppBar position="fixed" open={open} style={{ background: "#3346FF" }}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -123,7 +123,7 @@ const Sidebar = () => {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Generate ID Card
+            Form Registration
           </Typography>
         </Toolbar>
       </AppBar>

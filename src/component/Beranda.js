@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import image from "../img/background-2.svg";
+import image from "../img/background-1.svg";
 
 const Beranda = () => {
   return (
@@ -18,8 +18,8 @@ const Beranda = () => {
 export default Beranda;
 
 const Wrapper = styled.div`
-  background-color: #8ec5fc;
-  background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+  background-color: #3346FF;
+  background-image: linear-gradient(62deg, #3346FF 0%, #e0c3fc 100%);
   min-width: 100%;
   min-height: 100vh;
   display: flex;

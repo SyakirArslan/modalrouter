@@ -13,7 +13,7 @@ export default function Footer() {
       <Container
         fluid
         className="p-2 mx-auto"
-        style={{ background: "#080707" }}
+        style={{ background: "#3346FF" }}
       >
         <Typography
           variant="caption"
@@ -22,9 +22,8 @@ export default function Footer() {
           color="white"
           className="text-center"
         >
-          Created by Aditya Wisnu
           <br />
-          <Icon.MdCopyright /> {getYear()} Prodemy Gen#7
+          <Icon.MdCopyright /> {getYear()}
         </Typography>
       </Container>
     </>
